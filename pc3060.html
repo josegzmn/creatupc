@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<head><title>Estructura HTML5</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jose Guzman">
+    <link rel="stylesheet" href="Estilo1.css">
+    </head>
+    <body>
+    <header class="Jo">
+        <h1>COMPONENTES DE PC</h1>
+    </header>
+    <nav>
+        <ul>
+        <li><a href="http://www.Amazon.com/">Amazon</a></li>
+        <li><a href="http://www.Mercadolibre.com/">Mercado Libre</a></li>
+        <li><a href="http://www.Cyberpuerta.com/">CyberPuerta</a></li>
+        </ul>
+    </nav>
+    <div class="contenido">
+<section>
+    <h2>COMPLEMENTOS PARA RENDIMIENTO ESTABLE</h2>
+    <img src="descarga.jpg"class="huevo">
+    
+    <br><br><br><br>
+    <h3>Esenciales</h3>
+    <ul>
+        <li>Tarjeta gráfica: NVIDIA GTX 960, AMD R9 280 o GPU equivalente(compatible con DX11)</li>
+        <li>Memoria gráfica: 2 GB de VRAM</li>
+        <li>Procesador: Intel Core i5-7300U de 3.5 GHz, AMD Ryzen 3 3300U o equivalente</li>
+        <li>Memoria RAM: 16 GB de RAM o superior</li>
+        <li>Mueve sDisco duro: unidad de estado sólido NVMe</li>
+        <li>Sistema operativo: Windows 10/11 de 64 bits</li>
+    </ul>  
+    <br><br>
+    <h3>Recomendaciones</h3>
+    <ul>
+        <li>Conectar la PC a una fuente de poder.</li>
+        <li>Tener un monitor acorde a los fps que te de tu PC.</li>
+    </ul>    
+</section>
+<aside>
+    <h2>Herramientas:</h2>
+    <br><br>
+    <ul>
+      <li>Destornillador</li>
+      <li>Pasta termica</li>
+      <li>Pulsera antiestatica</li>
+      <li>Pinzas</li>
+      <li>Alcohol isopropilico</li>
+
+    </ul>
+  </aside>
+</div>
+    </body>
+    <footer>Aqui tienes una PC ideal para jugar </footer>
+    <script>
+        let visitas = localStorage.getItem("contadorVisitas");
+
+        if (visitas === null) {
+          visitas = 1;
+        } else {
+          visitas = parseInt(visitas) + 1;
+        }
+
+        localStorage.setItem("contadorVisitas", visitas);
+
+        const footer = document.querySelector("footer");
+        const parrafo = document.createElement("p");
+        parrafo.textContent = "Visitas en este navegador: " + visitas;
+        parrafo.style.color = "#fff";
+        footer.appendChild(parrafo);
+    </script>
+    </html>
